@@ -8,10 +8,12 @@
 </head>
 
 <body>
-  <nav><a href="/login"><img id="logo" src="/assets/img/face.png" alt="face logo" /></a>
-    <div class="navlink"><a id="loginButton" href="/login">Login</a></div>
-    <div class="navlink"><a id="signupButton" href="/signup">Sign up</a></div>
-  </nav>
+
+  <div class="nav">
+    <a href="/login"><img id="logo" src="/assets/img/face.png" alt="face logo" /></a>
+    <a id="loginButton" href="/login">Login</a>
+    <a id="signupButton" href="/signup">Sign up</a>
+  </div>
 
   <section id="content">
     <div id='title-window'>
@@ -28,7 +30,7 @@
 
   </section>
 
-{{!-- error --}}
+  {{!-- error --}}
   <div id="domoMessage" class='hidden'>
     <img id="speech" src="/assets/img/speech.png" alt="speech box" />
     <h3><span id="errorMessage"></span></h3>
