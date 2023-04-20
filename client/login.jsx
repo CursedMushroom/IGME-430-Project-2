@@ -86,6 +86,8 @@ const SignupWindow = (props) => {
 const init = () => {
     const loginButton = document.getElementById('loginButton');
     const signupButton = document.getElementById('signupButton');
+    const titleSignUp = document.getElementById('title-sign-up');
+    const titleLogin = document.getElementById('title-login');
 
     loginButton.addEventListener('click', (e) => {
         e.preventDefault();
@@ -94,7 +96,21 @@ const init = () => {
         return false;
     });
 
+    titleLogin.addEventListener('click', (e) => {
+        e.preventDefault();
+        ReactDOM.render(<LoginWindow />,
+            document.getElementById('content'));
+        return false;
+    });
+
     signupButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        ReactDOM.render(<SignupWindow />,
+            document.getElementById('content'));
+        return false;
+    });
+
+    titleSignUp.addEventListener('click', (e) => {
         e.preventDefault();
         ReactDOM.render(<SignupWindow />,
             document.getElementById('content'));

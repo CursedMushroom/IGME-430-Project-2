@@ -26,7 +26,7 @@ const login = (req, res) => {
 
     req.session.account = Account.toAPI(account);
 
-    return res.json({ redirect: '/maker' });
+    return res.json({ redirect: '/mushroom' });
   });
 };
 
@@ -49,7 +49,7 @@ const signup = async (req, res) => {
     await newAccount.save();
 
     req.session.account = Account.toAPI(newAccount);
-    return console.log(req.session.account);
+    return res.json({ redirect: '/mushroom' });
   } catch (err) {
     console.log(err);
     if (err.code === 11000) {

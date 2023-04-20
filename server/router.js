@@ -7,6 +7,10 @@ const router = (app) => {
 
   app.post('/signup', mid.requiresSecure, mid.requiresLogout, controllers.Account.signup);
 
+  app.get('/logout', mid.requiresLogin, controllers.Account.logout);
+
+  app.get('/mushroom', mid.requiresLogin, controllers.Mushroom.gamePage);
+
   app.get('/', mid.requiresSecure, mid.requiresLogout, controllers.Account.loginPage);
 };
 

@@ -1,9 +1,17 @@
 :root {
-    --color-1: #9EBC9E;
-    --color-2: #FFCFD2;
-    --color-3: #FFAFC5;
-    --color-4: #553E4E;
-    --color-5: #E0479E;
+    /* primary */
+    --forest-green: #5C7B63;
+    --deep-purple: #553E4E;
+    /* complementary colors */
+    --soft-green: #9EBC9E;
+    --pale-yellow: #F7EBC6;
+    --light-brown: #C6A886;
+    /*accent colors */
+    --soft-purple: #D9C7E8;
+    --palest-pink: #fcedee;
+    /*highlight color */
+    --pale-pink: #FFCFD2;
+
 }
 
 html,
@@ -13,40 +21,41 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background-color: #fcedee;
+    background-color: var(--palest-pink);
 }
 
 #title-window {
     text-align: center;
-    margin:10%;
+    margin: 10%;
 }
 
 #title-window h1 {
     font-size: 3em;
     margin: 3%;
     padding: 0;
-    color: var(--color-1);
+    color: var(--forest-green);
 }
-#title-window p{
+
+#title-window p {
     font-size: 1.5em;
     margin-left: 10%;
     margin-right: 10%;
     padding: 0;
-    color: var(--color-3);
+    color: var(--light-brown);
 }
 
 #title-buttons {
     text-align: center;
     display: flex;
     justify-content: space-evenly;
-    margin-right:0;
+    margin-right: 0;
 }
 
 
 #title-buttons button {
-    background-color: var(--color-1);
+    background-color: var(--soft-purple);
     border: none;
-    color: var(--color-4);
+    color: var(--depp-purple);
     padding: 12px 24px;
     text-align: center;
     text-decoration: none;
@@ -57,8 +66,10 @@ body {
     border-radius: 8px;
     transition: all 0.4s ease;
 }
-#title-buttons button:hover{
-    background-color: var(--color-2);
+
+#title-buttons button:hover {
+    background-color: var(--pale-yellow);
+    color: var(--depp-purple);
 }
 
 #logo {
@@ -72,7 +83,7 @@ body {
 nav {
     width: 100%;
     height: 50px;
-    background-color: #55acee;
+    background-color: var(--light-brown);
 }
 
 nav:nth-child(1) {
@@ -97,72 +108,18 @@ nav:nth-child(1) {
     text-decoration: none;
     padding: 5px;
     border-radius: 4px;
-    background-color: #55acee;
+    background-color: var(--light-brown);
     transition: background-color 0.4s ease;
 }
 
 .navlink a:hover {
     transition: background-color 0.8s ease;
-    background-color: #66bdff;
+    background-color: var(--soft-purple);
+    ;
 }
 
-.domoForm {
-    border: 2px solid #338acc;
-    height: 35px;
-    width: 700px;
-    margin-top: 0px;
-    padding-top: 10px;
-    background-color: #55acee;
-    border-bottom-right-radius: 4px;
-    border-top-right-radius: 4px;
-    display: flex;
-}
 
-.domoForm label {
-    display: inline-block;
-    width: 75px;
-    margin-left: 10px;
-    font-size: 1.2em;
-    float: left;
-    color: white;
-}
 
-.domoForm input[type=text] {
-    float: left;
-}
-
-.makeDomoSubmit {
-    transition: background-color 0.4s ease;
-    display: inline;
-    width: 90px;
-    background-color: #55acee;
-    border-radius: 2px;
-    color: white;
-    text-decoration: none;
-}
-
-.makeDomoOrder {
-    transition: background-color 0.4s ease;
-    display: inline;
-    width: 90px;
-    background-color: #55acee;
-    border-radius: 2px;
-    color: white;
-    text-decoration: none;
-
-}
-
-.makeDomoSubmit:link,
-.makeDomoSubmit:visited,
-.makeDomoSubmit:hover,
-.makeDomoSubmit:active {
-    color: white;
-}
-
-.makeDomoSubmit:hover {
-    transition: background-color 0.4s ease;
-    background-color: #338acc;
-}
 
 .mainForm {
     height: 300px;
@@ -192,7 +149,7 @@ nav:nth-child(1) {
     margin-top: 14px;
     font-size: 1.2em;
     width: 100px;
-    background-color: #55acee;
+    background-color: var(--light-brown);
     border-radius: 2px;
     border-color: #66acee;
     padding: 3px 0px;
@@ -225,86 +182,18 @@ nav:nth-child(1) {
 #pass:focus,
 #pass2:focus {
     outline: none;
-    box-shadow: 0px 0px 1px 1px #55acee;
+    box-shadow: 0px 0px 1px 1px var(--light-brown);
 }
 
 .hidden {
     display: none;
 }
 
-#domoMessage {
-    top: 250px;
-    width: 250px;
-    height: 650px;
-    position: absolute;
-    z-index: 200;
-    right: 0px;
-    overflow: hidden;
-}
-
-#domoMessage h3 {
-    width: 200px;
-    position: absolute;
-    top: 0px;
-    left: 20px;
-}
-
-#speech {
-    height: 120px;
-    width: 250px;
-    z-index: 300;
-}
-
-#errorMessage {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: red;
-    font-style: italic;
-}
-
-#domo {
-    z-index: 225;
-    margin-top: -20px;
-    margin-left: 135px;
-    height: 450px;
-    width: 300px;
-    -ms-transform: rotate(330deg);
-    -webkit-transform: rotate(330deg);
-    transform: rotate(330deg);
-}
-
-#domos {
-    width: 40%;
-    min-width: 400px;
-    border: 2px solid #55acee;
-    border-radius: 4px;
-    margin: 0 auto;
-    margin-top: 100px;
-}
-
-.domo {
-    width: 95%;
-    margin: 0 auto;
-    margin-top: 2px;
-    margin-bottom: 2px;
-    border: 2px solid #55acee;
-    border-radius: 4px;
-    background-color: #55acee;
-    padding: 10px;
-    min-height: 60px;
-    overflow: hidden;
-}
-
 h4::first-letter {
     text-transform: capitalize;
 }
 
-.domo:hover {
-    transition: border-color 0.2s ease-out;
-    border-color: rgba(255, 255, 255, 0.8);
-    transition: background-color 2.6s ease-out;
-    background-color: #66bfff;
-}
+
 
 img.domoFace {
     margin-left: 25px;
@@ -314,37 +203,4 @@ img.domoFace {
     border-radius: 4px;
     margin-top: 10px;
     float: left;
-}
-
-h3.emptyDomo {
-    width: 400px;
-    font-size: 1.5em;
-    margin: 0 auto;
-    text-align: center;
-    margin-top: 18px;
-}
-
-h3.domoName {
-    /* float:left; */
-    width: 200px;
-    font-weight: bold;
-    padding-left: 65px;
-    font-size: 1.5em;
-}
-
-h3.domoAge {
-    /* float:right; */
-    text-align: left;
-    width: 100px;
-    font-weight: bold;
-    padding-right: 40px;
-    font-size: 1.5em;
-}
-
-.domo:first-child {
-    margin-top: 10px;
-}
-
-.domo:last-child {
-    margin-bottom: 10px;
 }
