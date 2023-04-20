@@ -42,6 +42,7 @@ const handleSignup = (e) => {
 
 }
 
+//login window
 const LoginWindow = (props) => {
     return (
         <form id="loginForm"
@@ -59,6 +60,7 @@ const LoginWindow = (props) => {
     );
 };
 
+//signup window
 const SignupWindow = (props) => {
     return (
         <form id="signupForm"
@@ -80,6 +82,7 @@ const SignupWindow = (props) => {
     )
 }
 
+//renders each window on button click
 const init = () => {
     const loginButton = document.getElementById('loginButton');
     const signupButton = document.getElementById('signupButton');
@@ -98,8 +101,8 @@ const init = () => {
         return false;
     });
 
-    ReactDOM.render(<LoginWindow />,
-        document.getElementById('content'));
+    // ReactDOM.render(<TitleWindow />,
+    //     document.getElementById('content'));//first page/component to load
 };
 
 window.onload = init;

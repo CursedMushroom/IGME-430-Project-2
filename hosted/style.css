@@ -1,3 +1,11 @@
+:root {
+    --color-1: #9EBC9E;
+    --color-2: #FFCFD2;
+    --color-3: #FFAFC5;
+    --color-4: #553E4E;
+    --color-5: #E0479E;
+}
+
 html,
 body {
     height: 100%;
@@ -5,6 +13,52 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    background-color: #fcedee;
+}
+
+#title-window {
+    text-align: center;
+    margin:10%;
+}
+
+#title-window h1 {
+    font-size: 3em;
+    margin: 3%;
+    padding: 0;
+    color: var(--color-1);
+}
+#title-window p{
+    font-size: 1.5em;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 0;
+    color: var(--color-3);
+}
+
+#title-buttons {
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    margin-right:0;
+}
+
+
+#title-buttons button {
+    background-color: var(--color-1);
+    border: none;
+    color: var(--color-4);
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5em;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.4s ease;
+}
+#title-buttons button:hover{
+    background-color: var(--color-2);
 }
 
 #logo {
@@ -240,8 +294,9 @@ nav:nth-child(1) {
     min-height: 60px;
     overflow: hidden;
 }
+
 h4::first-letter {
-    text-transform:capitalize;
+    text-transform: capitalize;
 }
 
 .domo:hover {
