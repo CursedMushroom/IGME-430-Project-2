@@ -8,30 +8,70 @@
 </head>
 
 <body>
-   <div class="nav">
-        <a href="/logout">Log out</a>
-    </div>
+  <div class="nav">
+    <a href="/logout">Log out</a>
+  </div>
   <div id="app-page">
     <div id="game-screen">
     </div>
 
     <div id="sideDiv">
-      <div id="flowers-settings"></div>
+      <div id="flowers-settings">
+        <h3 id="total-current-flowers">Total Flowers: 0</h3>
+        <button id="setting-button">Settings</button>
+      </div>
 
-      <div id="shop-area"></div>
+      <div id="shop-area">
+        <p id="flowerError">You Dont have Enough Flowers!</p>
+        <div id="shop-item">
+          <div id="temp-img">img</div>
+          <div id="shop-item-info">
+            <h3>Mushroom 1</h3>
+            <p>Desc Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, velit.</p>
+            <p>Cost: 10</p>
+          </div>
+          <div id="buy-have">
+            <button class="buy-button" id="buy-mushroom1">Buy</button>
+            <p id="have">Have: 0</p>
+          </div>
 
-      <div id="ad-space"></div>
+        </div>
+
+
+      </div>
+
+      <div id="ad-space">
+        <div id="ad">AD</div>
+        <div id="ad">AD</div>
+      </div>
     </div>
   </div>
 
+  <div class="popup" id="settings">
+    <div class="overlay">
+      <div class="popcontent">
+        <h1 id="pop-title">Menu</h1>
+        <div id="pop-media-btns">
+          <button type="button" class='pop-btn'>Button 1</button>
+          <button type="button" class='pop-btn'>Button 2</button>
+          <button type="button" class='pop-btn'>Button 3</button>
+          <button type="button" id='remove-ads' class='pop-btn'>Remove Ads</button>
+          <button type="button" id='closepopup' class='pop-btn'>Close</button>
+        </div>
 
 
-  <div id="domoMessage" class='hidden'>
-    <img id="speech" src="/assets/img/speech.png" alt="speech box" />
-    <h3><span id="errorMessage"></span></h3>
-    <img id="domo" src="assets/img/domo.png" alt="domo" />
-  </div>
-  <script src="/assets/appBundle.js"></script>
+      </div>
+    </div>
+
+
+
+
+    <div id="domoMessage" class='hidden'>
+      <img id="speech" src="/assets/img/speech.png" alt="speech box" />
+      <h3><span id="errorMessage"></span></h3>
+      <img id="domo" src="assets/img/domo.png" alt="domo" />
+    </div>
+    <script src="/assets/appBundle.js"></script>
 </body>
 
 </html>

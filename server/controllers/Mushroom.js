@@ -1,4 +1,4 @@
-// const models = require('../models');
+//const models = require('../models');
 
 const gamePage = async (req, res) => res.render('app');
 
