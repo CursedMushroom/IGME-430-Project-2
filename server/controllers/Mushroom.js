@@ -16,10 +16,9 @@ const updateCurrency = async (req, res) => {
 };
 
 const getGameData = async (req, res) => {
-  console.log(Account.findById(req.session.account._id ).select.currency);
-  //.findOne({req.session.account._id });
+  // .findOne({req.session.account._id });
   try {
-    const account = await req.session.account.findById(currency);
+    const account = await Account.findById(req.session.account._id).select('currency');
     return res.json({ flowers: account.currency });
   } catch (err) {
     console.log(err);

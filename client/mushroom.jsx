@@ -50,10 +50,14 @@ const removeAds = () => {
     document.querySelector('#shop-area').style.height = '90%';
 }
 
-const loadGameData=async()=>{
-    const response= await fetch('/loadGameData');
-    const data= await response.json();
-    flowers=data.flowers;
+const loadGameData = async () => {
+    const response = await fetch('/loadGameData');
+    const data = await response.json();
+    flowers = data.flowers;
+    
+    
+    console.log(flowers);
+    document.querySelector('#total-current-flowers').innerHTML = `Total Flowers: ${data.flowers}`;
 }
 
 
