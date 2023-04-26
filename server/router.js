@@ -11,6 +11,10 @@ const router = (app) => {
 
   app.get('/mushroom', mid.requiresLogin, controllers.Mushroom.gamePage);
 
+  app.post('/updateGameInfo', mid.requiresLogin, controllers.Mushroom.updateCurrency);
+
+  app.get('/loadGameData', mid.requiresLogin, controllers.Mushroom.getGameData);
+
   app.get('/', mid.requiresSecure, mid.requiresLogout, controllers.Account.loginPage);
 };
 

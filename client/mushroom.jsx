@@ -9,7 +9,18 @@ let totalMushroom = 1;
 const flowerTimer = () => {
     flowers += petalpersec;
     document.querySelector('#total-current-flowers').innerHTML = `Total Flowers: ${flowers}`;
+
 };
+
+const updateGameInfo = () => {
+    //update curreny in server
+    console.log('update game info');
+    helper.sendPost('/updateGameInfo', { flowers, petalpersec, totalMushroom });
+    //update petalpersec in server
+
+    //update totalMushrooms in server
+
+}
 
 const buyMushroom = (price) => {
     if (flowers >= price) {
@@ -39,6 +50,12 @@ const removeAds = () => {
     document.querySelector('#shop-area').style.height = '90%';
 }
 
+const loadGameData=async()=>{
+    const response= await fetch('/loadGameData');
+    const data= await response.json();
+    flowers=data.flowers;
+}
+
 
 const init = () => {
     document.querySelector('#setting-button').addEventListener('click', settingPopUp);
@@ -49,6 +66,9 @@ const init = () => {
 
 
     setInterval(flowerTimer, 5000);
+    setInterval(updateGameInfo, 6000);
+
+    loadGameData();
 }
 
 window.onload = init;

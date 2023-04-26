@@ -82,7 +82,7 @@ body {
 #title-buttons button {
     background-color: var(--soft-purple);
     border: none;
-    color: var(--depp-purple);
+    color: var(--deep-purple);
     padding: 12px 24px;
     text-align: center;
     text-decoration: none;
@@ -96,7 +96,7 @@ body {
 
 #title-buttons button:hover {
     background-color: var(--pale-yellow);
-    color: var(--depp-purple);
+    color: var(--deep-purple);
 }
 
 #logo {
@@ -194,7 +194,7 @@ img.domoFace {
 }
 
 #sideDiv {
-    background-color: #338acc;
+    background-color: var(--palest-pink);
     flex: 1;
 }
 
@@ -345,5 +345,10 @@ img.domoFace {
 
 .popup.active #pop-title {
     color: var(--pale-yellow);
+}
+
+#flowerError{
+    color: var(--deep-purple);
+    text-align: center;
 }
 
