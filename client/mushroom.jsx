@@ -4,7 +4,12 @@ const ReactDOM = require('react-dom');
 
 let flowers = 0;
 let petalpersec = 1;
+
 let totalMushroom = 1;
+// let totalMushroom2 = 0;
+// let totalMushroom3 = 0;
+// let totalMushroom4 = 0;
+// let totalMushroom5 = 0;
 
 const flowerTimer = () => {
     flowers += petalpersec;
@@ -14,11 +19,11 @@ const flowerTimer = () => {
 
 const updateGameInfo = () => {
     //update curreny in server
+    //update petalpersec in server
+    //update totalMushrooms in server
     console.log('update game info');
     helper.sendPost('/updateGameInfo', { flowers, petalpersec, totalMushroom });
-    //update petalpersec in server
-
-    //update totalMushrooms in server
+    
 
 }
 
@@ -46,6 +51,7 @@ const settingPopUp = () => {
 }
 
 const removeAds = () => {
+   // helper.sendPost('/updateAds', false);
     document.querySelector('#ad-space').classList.add('hidden');
     document.querySelector('#shop-area').style.height = '90%';
 }
@@ -53,11 +59,17 @@ const removeAds = () => {
 const loadGameData = async () => {
     const response = await fetch('/loadGameData');
     const data = await response.json();
-    flowers = data.flowers;
-    
-    
+    flowers = data.info.currency;
+    console.log(data.info);
+
+    if(data.info.hasAds === false){
+        console.log('remove ads');
+        removeAds();
+    }
+
+
     console.log(flowers);
-    document.querySelector('#total-current-flowers').innerHTML = `Total Flowers: ${data.flowers}`;
+    document.querySelector('#total-current-flowers').innerHTML = `Total Flowers: ${data.info.currency}`;
 }
 
 

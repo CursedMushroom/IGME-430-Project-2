@@ -34,7 +34,6 @@ const signup = async (req, res) => {
   const username = `${req.body.username}`;
   const pass = `${req.body.pass}`;
   const pass2 = `${req.body.pass2}`;
-  console.log(Account);
 
   if (!username || !pass || !pass2) {
     return res.status(400).json({ error: 'All fields are required!' });
@@ -51,7 +50,6 @@ const signup = async (req, res) => {
     req.session.account = Account.toAPI(newAccount);
     return res.json({ redirect: '/mushroom' });
   } catch (err) {
-    console.log(err);
     if (err.code === 11000) {
       return res.status(400).json({ error: 'Username already in use!' });
     }

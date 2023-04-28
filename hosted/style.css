@@ -171,16 +171,6 @@ h4::first-letter {
     text-transform: capitalize;
 }
 
-
-
-img.domoFace {
-    margin-left: 25px;
-    margin-right: 10px;
-    height: 50px;
-    width: 50px;
-}
-
-
 #app-page {
     display: flex;
     width: 100%;
@@ -352,3 +342,15 @@ img.domoFace {
     text-align: center;
 }
 
+#logout-button{
+    background-color: var(--pale-pink);
+    color: var(--deep-purple);
+}
+
+#logout-button a{
+    color: var(--deep-purple);
+    text-decoration: none;
+}
+#logout-button a:hover{
+    font-size: larger;
+}

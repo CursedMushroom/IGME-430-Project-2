@@ -21,6 +21,14 @@ const AccountSchema = new mongoose.Schema({
     type: Number,
     default: 0,
   },
+  currencyPerSecond: {
+    type: Number,
+    default: 1,
+  },
+  hasAds: {
+    type: Boolean,
+    default: true,
+  },
   createdDate: {
     type: Date,
     default: Date.now,
