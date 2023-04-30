@@ -186,6 +186,7 @@ h4::first-letter {
 #sideDiv {
     background-color: var(--palest-pink);
     flex: 1;
+    height: 100vh;
 }
 
 #flowers-settings {
@@ -199,7 +200,6 @@ h4::first-letter {
 #shop-area {
     background-color: var(--pale-yellow);
     height: 60%;
-
 
     overflow-y: auto;
 }
@@ -217,25 +217,37 @@ h4::first-letter {
     justify-content: space-between;
 }
 
-#temp-img{
-    width:150px;
+#temp-img {
+    width: 100px;
     margin: 3px;
     background-color: #D9C7E8;
 }
 
-#shop-item-info{
+#shop-item-info {
     margin-left: 10px;
     margin-top: 10px;
 }
 
-#shop-item-info h3 {
+#mush-name {
     margin: 0;
     padding: 0;
+    color: var(--deep-purple)
 }
-#shop-item-info p {
+
+#mush-desc {
     margin: 0;
     padding: 3px;
     font-size: 12px;
+    height: 70px;
+    overflow-y: auto;
+    color: var(--pale-yellow)
+}
+#cost{
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    height: 20px;
+    color: var(--deep-purple)
 }
 
 #buy-have {
@@ -297,7 +309,10 @@ h4::first-letter {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
-    background: var(--forest-green);
+    /* background: var(--forest-green); */
+    background-image: url(img/StonePopup.png);
+    background-repeat: no-repeat;
+    background-size: 450px 380px;
     width: 450px;
     height: 380px;
     z-index: 2;
@@ -318,39 +333,56 @@ h4::first-letter {
 
 }
 
-#pop-media-btns{
-    display:flex;
+#pop-media-btns {
+    display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.pop-btn{
-    width:150px;
-    height:30px;
-    margin:10px;
-    margin-left:auto;
-    margin-right:auto;
+.pop-btn {
+    width: 150px;
+    height: 30px;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 8px;
+    font-weight: bold;
+
+
+    background-color: var(--palest-pink);
+    color: var(--soft-green);
+    border: 2px solid var(--soft-green);
+
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.pop-btn:hover {
+    background-color: var(--soft-green);
+    color: var(--pale-yellow);
 }
 
 .popup.active #pop-title {
     color: var(--pale-yellow);
 }
 
-#flowerError{
+#flowerError {
     color: var(--deep-purple);
     text-align: center;
 }
 
-#logout-button{
+#logout-button {
     background-color: var(--pale-pink);
     color: var(--deep-purple);
 }
 
-#logout-button a{
+#logout-button a {
     color: var(--deep-purple);
     text-decoration: none;
 }
-#logout-button a:hover{
+
+#logout-button a:hover {
     font-size: larger;
 }

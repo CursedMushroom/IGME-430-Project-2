@@ -35,7 +35,6 @@ const updateAds = async (req, res) => {
   }
 };
 
-
 const getGameData = async (req, res) => {
   // .findOne({req.session.account._id });
   try {

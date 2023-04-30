@@ -26,41 +26,38 @@
 
 
         <div id="shop-item">
-          <div id="temp-img">img</div>
+          <img src="/assets/img/buttonmush.jpg" alt="button" id="temp-img">
+          {{!-- <div id="temp-img">img</div> --}}
           <div id="shop-item-info">
-            <h3>Mushroom 1</h3>
-            <p>Desc Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, velit.</p>
-            <p>Cost: 10</p>
+            <h3 id="mush-name">Button</h3>
+            <p id="mush-desc">
+              Button is a gentle soul and has a kind heart. Button is incredibly empathetic and always puts others before
+              itself. Although Button is very shy, Button deeply craves connection and companionship. Button longs for a friend
+              who can understand and accept it for who it is, despite its shyness.
+
+              Button is incredibly shy and often hides under leaves or behind other objects to avoid
+              being noticed. Button is easily startled and will quickly retreat into its hiding spot at the slightest
+              sign of danger or confrontation, leaving Button to not grab many flowers when out and about</p>
+            <p id="cost">Flower increase: +1 || Cost: 10</p>
           </div>
           <div id="buy-have">
             <button class="buy-button" id="buy-mushroom1">Buy</button>
-            <p id="have">Have: 1</p>
+            <p id="button-have">Have: 1</p>
           </div>
         </div>
 
-         <div id="shop-item">
-          <div id="temp-img">img</div>
-          <div id="shop-item-info">
-            <h3>Mushroom 2</h3>
-            <p>Desc Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, velit.</p>
-            <p>Cost: 30</p>
-          </div>
-          <div id="buy-have">
-            <button class="buy-button" id="buy-mushroom2">Buy</button>
-            <p id="have">Have: 0</p>
-          </div>
-        </div>
+
 
         <div id="shop-item">
           <div id="temp-img">img</div>
           <div id="shop-item-info">
-            <h3>Mushroom 3</h3>
+            <h3 id="mush-name">Myco</h3>
             <p>Desc Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, velit.</p>
             <p>Cost: 70</p>
           </div>
           <div id="buy-have">
             <button class="buy-button" id="buy-mushroom3">Buy</button>
-            <p id="have">Have: 0</p>
+            <p id="morel-have">Have: 0</p>
           </div>
         </div>
 
@@ -68,7 +65,7 @@
         <div id="shop-item">
           <div id="temp-img">img</div>
           <div id="shop-item-info">
-            <h3>Mushroom 4</h3>
+            <h3 id="mush-name">Bridei</h3>
             <p>Desc Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, velit.</p>
             <p>Cost: 120</p>
           </div>
@@ -81,13 +78,40 @@
         <div id="shop-item">
           <div id="temp-img">img</div>
           <div id="shop-item-info">
-            <h3>Mushroom 5</h3>
+            <h3 id="mush-name">Marelle</h3>
             <p>Desc Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, velit.</p>
             <p>Cost: 200</p>
           </div>
           <div id="buy-have">
             <button class="buy-button" id="buy-mushroom5">Buy</button>
             <p id="have">Have: 0</p>
+          </div>
+        </div>
+
+        <div id="shop-item">
+          <img src="/assets/img/PortobelloMush.jpg" alt="ben" id="temp-img">
+          {{!-- <div id="temp-img">img</div> --}}
+          <div id="shop-item-info">
+            <h3 id="mush-name">Ben</h3>
+            <p id="mush-desc">Despite his lack of understanding, Ben has found himself in the role of a tax collector. He's taken to
+              running up to people and exclaiming, "I am a tax collector!" before demanding payment from them. To Ben,
+              this is just a job like any other, and he doesn't understand why people get upset or confused when he
+              tries to collect money from them.
+
+              Unfortunately, Ben's lack of understanding has led him down a dangerous path. He doesn't understand the
+              moral repercussions of what he's doing, and he doesn't realize that he's essentially stealing from people
+              who have done nothing wrong. Despite the protests of those around him, Ben continues to collect "taxes"
+              from anyone he can.
+
+              Despite his misguided ways, there's a certain innocence to Ben that's hard to ignore. He's just a mushroom
+              trying to make his way in the world, and he doesn't understand why everyone is so upset with him. With the
+              right guidance, Ben could be a valuable member of any community, but for now, he's stuck in a cycle of
+              confusion and misdeeds.</p>
+            <p id="cost">Flower increase: +100 || Cost: 500</p>
+          </div>
+          <div id="buy-have">
+            <button class="buy-button" id="buy-mushroom2">Buy</button>
+            <p id="ben-have">Have: 0</p>
           </div>
         </div>
 
@@ -120,7 +144,7 @@
 
 
 
-    <div id="domoMessage" class='hidden'>
+    <div id="errorDiv" class='hidden'>
       <img id="speech" src="/assets/img/speech.png" alt="speech box" />
       <h3><span id="errorMessage"></span></h3>
       <img id="domo" src="assets/img/domo.png" alt="domo" />
