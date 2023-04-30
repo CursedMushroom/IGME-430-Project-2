@@ -218,7 +218,8 @@ h4::first-letter {
 }
 
 #temp-img {
-    width: 100px;
+    width: 120px;
+    height: 120px;
     margin: 3px;
     background-color: #D9C7E8;
 }
@@ -242,10 +243,11 @@ h4::first-letter {
     overflow-y: auto;
     color: var(--pale-yellow)
 }
-#cost{
+
+#cost {
     margin: 0;
     padding: 0;
-    font-size: 12px;
+    font-size: 8px;
     height: 20px;
     color: var(--deep-purple)
 }
