@@ -71,9 +71,10 @@ const getGameData = async (req, res) => {
 
 const changePassword = async (req, res) => {
   try {
-    const account = await Account.findById(req.session.account._id);
-    account.password = req.body.password;
-    await account.save();
+    const account = await Account.findByIdAndUpdate(
+      req.session.account._id,
+      { password: req.body.newPass },
+    );
     return res.json({ message: `${account}: updated successfully!` });
   } catch (err) {
     return res.status(500).json({ error: 'An error occured!' });

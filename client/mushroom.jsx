@@ -153,10 +153,17 @@ const buyMushroom = (price, mushroom) => {
 
 const settingsPopup = () => {
     document.querySelector('#settings').classList.toggle('active');
-    clearAddFields();
 };
 const passChange = () => {
     document.querySelector('#change-pass').classList.toggle('active');
+}
+
+const changePass=(e)=>{
+    let newPass=document.querySelector('#confirm-password').value;
+    if(document.querySelector('#new-password').value===document.querySelector('#confirm-password').value){
+        console.log('passwords match');
+        helper.sendPost('/changePassword', {newPass});
+    }
 }
 
 const removeAds = () => {
@@ -196,20 +203,14 @@ const loadGameData = async () => {
 
 }
 
-
-
-
-
-
-
-
-
 const init = () => {
     document.querySelector('#setting-button').addEventListener('click', settingsPopup);
     document.querySelector('#closepopup').addEventListener('click', settingsPopup);
 
-    // document.querySelector('#change-password').addEventListener('click', passChange);
+    document.querySelector('#change-password-pop').addEventListener('click', passChange);
     document.querySelector('#settings-closepopup').addEventListener('click', passChange);
+
+    document.querySelector('#change-password').addEventListener('click', changePass);
 
     document.querySelector('#buy-mushroom1').addEventListener('click', () => buyMushroom(10, 'buttonMush'));
     document.querySelector('#buy-mushroom2').addEventListener('click', () => buyMushroom(80, 'inkMush'));
@@ -228,8 +229,6 @@ const init = () => {
     setInterval(updateGameInfo, 6000);
 
     loadGameData();
-
-
 
 
 }
