@@ -13,69 +13,71 @@ let bridalMush = 0;
 
 
 
+
+
 const flowerTimer = () => {
     flowers += petalpersec;
     let gameScreen = document.querySelector('#game-screen');
     document.querySelector('#total-current-flowers').innerHTML = `Total Flowers: ${flowers}`;
 
     if (flowers < 20) {
-        
-        gameScreen.src="/assets/img/background.jpg";
+
+        gameScreen.src = "/assets/img/background.jpg";
 
     }
     if (flowers >= 20 && flowers < 120) {
-        gameScreen.src="/assets/img/80fl.jpg";
-     
+        gameScreen.src = "/assets/img/80fl.jpg";
+
     }
     if (flowers >= 120 && flowers < 180) {
-        gameScreen.src="/assets/img/120fl.jpg";
+        gameScreen.src = "/assets/img/120fl.jpg";
     }
     if (flowers >= 180 && flowers < 210) {
-        gameScreen.src="/assets/img/180fl.jpg";
+        gameScreen.src = "/assets/img/180fl.jpg";
     }
     if (flowers >= 210 && flowers < 280) {
 
-        gameScreen.src="/assets/img/210.jpg";
+        gameScreen.src = "/assets/img/210.jpg";
     }
     if (flowers >= 280 && flowers < 320) {
 
-        gameScreen.src="/assets/img/280fl.jpg";
+        gameScreen.src = "/assets/img/280fl.jpg";
     }
     if (flowers >= 320 && flowers < 400) {
 
-        gameScreen.src="/assets/img/320fl.jpg";
+        gameScreen.src = "/assets/img/320fl.jpg";
     }
     if (flowers >= 400 && flowers < 450) {
 
-        gameScreen.src="/assets/img/400fl.jpg";
+        gameScreen.src = "/assets/img/400fl.jpg";
     }
     if (flowers >= 450 && flowers < 480) {
 
-        gameScreen.src="/assets/img/450fl.jpg";
+        gameScreen.src = "/assets/img/450fl.jpg";
     }
     if (flowers >= 480 && flowers < 500) {
 
-        gameScreen.src="/assets/img/480fl.jpg";
+        gameScreen.src = "/assets/img/480fl.jpg";
     }
     if (flowers >= 500 && flowers < 520) {
 
-        gameScreen.src="/assets/img/500fl.jpg";
+        gameScreen.src = "/assets/img/500fl.jpg";
     }
     if (flowers >= 520 && flowers < 580) {
 
-        gameScreen.src="/assets/img/520fl.jpg";
+        gameScreen.src = "/assets/img/520fl.jpg";
     }
     if (flowers >= 580 && flowers < 620) {
 
-        gameScreen.src="/assets/img/580fl.jpg";
+        gameScreen.src = "/assets/img/580fl.jpg";
     }
     if (flowers >= 620 && flowers < 680) {
 
-        gameScreen.src="/assets/img/620fl.jpg";
+        gameScreen.src = "/assets/img/620fl.jpg";
     }
     if (flowers >= 680 && flowers < 800) {
 
-        gameScreen.src="/assets/img/680fl.jpg";
+        gameScreen.src = "/assets/img/680fl.jpg";
     }
     if (flowers >= 800) {
 
@@ -157,19 +159,20 @@ const passChange = () => {
     document.querySelector('#change-pass').classList.toggle('active');
 }
 
-const changePass=(e)=>{
-    let newPass=document.querySelector('#confirm-password').value;
-    if(document.querySelector('#new-password').value===document.querySelector('#confirm-password').value){
+const changePass = (e) => {
+    let newPass = document.querySelector('#confirm-password').value;
+    if (document.querySelector('#new-password').value === document.querySelector('#confirm-password').value) {
         console.log('passwords match');
-        helper.sendPost('/changePassword', {newPass});
+        helper.sendPost('/changePassword', { newPass });
     }
 }
 
 const removeAds = () => {
-    // helper.sendPost('/updateAds', false);
+    helper.sendPost('/updateAds', { ads: false });
     document.getElementById('ad-space').style.display = 'none';
     document.querySelector('#shop-area').style.height = '80%';
 }
+
 
 const loadGameData = async () => {
     const response = await fetch('/loadGameData');
@@ -197,6 +200,8 @@ const loadGameData = async () => {
     document.querySelector('#myco-have').innerHTML = `Have: ${inkMush}`;
     document.querySelector('#bridei-have').innerHTML = `Have: ${bridalMush}`;
 
+    flowerTimer();
+
 
 
 
@@ -221,7 +226,6 @@ const init = () => {
     document.querySelector('#save-game').addEventListener('click', () => updateGameInfo());
     document.getElementById('flowerError').classList.add('hidden');
     document.querySelector('#remove-ads').addEventListener('click', removeAds);
-
 
 
     setInterval(flowerTimer, 5000);

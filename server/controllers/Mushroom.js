@@ -47,7 +47,7 @@ const updateAds = async (req, res) => {
   try {
     const account = await Account.findByIdAndUpdate(
       req.session.account._id,
-      { hasAds: req.body.ads },
+      { hasAds: false },
     );
     return res.json({ message: `${account}: updated successfully!` });
   } catch (err) {
@@ -56,14 +56,10 @@ const updateAds = async (req, res) => {
 };
 
 const getGameData = async (req, res) => {
-  // .findOne({req.session.account._id });
   try {
     const account = await Account.findById(req.session.account._id).select('currency currencyPerSecond hasAds buttonMushrooms mycoMushrooms marelleMushrooms brideiMushrooms benMushrooms').lean().exec();
-    // await Account.findById(req.session.account._id).select('currency');
-    // .select('currency perSec')
+
     return res.json({ info: account });
-    // data: { flowers: account.currency, perSec: account.currencyPerSecond }
-    // { flowers: account.currency }
   } catch (err) {
     return res.status(500).json({ error: 'An error occured!' });
   }

@@ -28,7 +28,7 @@
 
 
         <div id="shop-item">
-          <img src="/assets/img/buttonmush.jpg" alt="button" id="temp-img">
+          <img src="/assets/img/buttonmush.jpg" alt="button" class='buttonMush' id="temp-img">
           {{!-- <div id="temp-img">img</div> --}}
           <div id="shop-item-info">
             <h3 id="mush-name">Button</h3>
@@ -164,34 +164,31 @@
 
 
       </div>
-    </div></div>
+    </div>
+  </div>
 
-    <div class="popup" id="change-pass">
-      <div class="overlay">
-        <div class="popcontent">
-          <h1 id="pop-title">Change Password</h1>
-          <div id="pop-media-btns">
-            <label for="new-password">New Password</label>
-            <input type="password" name="new-password" id="new-password">
-            <label for="confirm-password">Confirm Password</label>
-            <input type="password" name="confirm-password" id="confirm-password">
+  <div class="popup" id="change-pass">
+    <div class="overlay">
+      <div class="popcontent">
+        <h1 id="pop-title">Change Password</h1>
+        <div id="pop-media-btns">
+          <label for="new-password">New Password</label>
+          <input type="password" name="new-password" id="new-password">
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" name="confirm-password" id="confirm-password">
 
-            <button type="button" id='change-password' class='pop-btn'>Change Password</button>
-            <button type="button" id='settings-closepopup' class='pop-btn'>Close</button>
-          </div>
-
-
+          <button type="button" id='change-password' class='pop-btn'>Change Password</button>
+          <button type="button" id='settings-closepopup' class='pop-btn'>Close</button>
         </div>
       </div>
+    </div>
 
+    
 
-
-
-
-      <div id="errorDiv" class='hidden'>
-        <h3><span id="errorMessage"></span></h3>
-      </div>
-      <script src="/assets/appBundle.js"></script>
+        <div id="errorDiv" class='hidden'>
+          <h3><span id="errorMessage"></span></h3>
+        </div>
+        <script src="/assets/appBundle.js"></script>
 </body>
 
 </html>

@@ -61,6 +61,19 @@
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
 }
+#pop-img{
+    width: 150px;
+    height: 150px;
+}
+#char-media{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#pop-desc{
+    font-size: 10px;
+}
 
 html,
 body {
