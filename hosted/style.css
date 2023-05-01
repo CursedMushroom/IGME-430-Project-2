@@ -147,6 +147,11 @@ body {
     color: var(--deep-purple);
 }
 
+#title-buttons a{
+    text-decoration: none;
+    color: var(--deep-purple);
+}
+
 #logo {
     height: 40px;
     width: 40;
@@ -228,9 +233,9 @@ h4::first-letter {
 #game-screen {
     width: 1100px;
     height: 690px;
-    background-image: url(img/background.jpg);
+    /* background-image: url(img/background.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
 
 }
 

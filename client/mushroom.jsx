@@ -15,68 +15,67 @@ let bridalMush = 0;
 
 const flowerTimer = () => {
     flowers += petalpersec;
+    let gameScreen = document.querySelector('#game-screen');
     document.querySelector('#total-current-flowers').innerHTML = `Total Flowers: ${flowers}`;
 
-
-
-    //change game-screen background image depeneding on amount of flowers
-    if (flowers < 80) {
-        document.querySelector("#game-screen").style.background = "url('img/background.jpg') no-repeat cover";
+    if (flowers < 20) {
+        
+        gameScreen.src="/assets/img/background.jpg";
 
     }
-    if (flowers >= 80 && flowers < 120) {
-        document.querySelector("#game-screen").style.background = "url('img/80fl.jpg') no-repeat cover";
+    if (flowers >= 20 && flowers < 120) {
+        gameScreen.src="/assets/img/80fl.jpg";
      
     }
     if (flowers >= 120 && flowers < 180) {
-        document.querySelector("#game-screen").style.background = "url('img/120fl.jpg') no-repeat cover";
+        gameScreen.src="/assets/img/120fl.jpg";
     }
     if (flowers >= 180 && flowers < 210) {
-        document.querySelector("#game-screen").style.background = "url('img/180fl.jpg') no-repeat cover";
+        gameScreen.src="/assets/img/180fl.jpg";
     }
     if (flowers >= 210 && flowers < 280) {
 
-        document.querySelector("#game-screen").style.background = "url('img/210.jpg') no-repeat cover";
+        gameScreen.src="/assets/img/210.jpg";
     }
     if (flowers >= 280 && flowers < 320) {
 
-        document.querySelector("#game-screen").style.background = "url('img/280fl.jpg') no-repeat cover";
+        gameScreen.src="/assets/img/280fl.jpg";
     }
     if (flowers >= 320 && flowers < 400) {
 
-        document.querySelector("#game-screen").style.background = "url('img/320fl.jpg') no-repeat cover";
+        gameScreen.src="/assets/img/320fl.jpg";
     }
     if (flowers >= 400 && flowers < 450) {
 
-        document.querySelector("#game-screen").style.background = "url('img/400fl.jpg') no-repeat cover";
+        gameScreen.src="/assets/img/400fl.jpg";
     }
     if (flowers >= 450 && flowers < 480) {
 
-        document.querySelector("#game-screen").style.background = "url('img/450fl.jpg') no-repeat cover";
+        gameScreen.src="/assets/img/450fl.jpg";
     }
     if (flowers >= 480 && flowers < 500) {
 
-        document.querySelector("#game-screen").style.background = "url('img/480fl.jpg') no-repeat cover";
+        gameScreen.src="/assets/img/480fl.jpg";
     }
     if (flowers >= 500 && flowers < 520) {
 
-        document.querySelector("#game-screen").style.background = "url('img/500fl.jpg') no-repeat cover";
+        gameScreen.src="/assets/img/500fl.jpg";
     }
     if (flowers >= 520 && flowers < 580) {
 
-        document.querySelector("#game-screen").style.background = "url('img/520fl.jpg') no-repeat cover";
+        gameScreen.src="/assets/img/520fl.jpg";
     }
     if (flowers >= 580 && flowers < 620) {
 
-        document.querySelector("#game-screen").style.background = "url('img/580fl.jpg') no-repeat cover";
+        gameScreen.src="/assets/img/580fl.jpg";
     }
     if (flowers >= 620 && flowers < 680) {
 
-        document.querySelector("#game-screen").style.background = "url('img/620fl.jpg') no-repeat cover";
+        gameScreen.src="/assets/img/620fl.jpg";
     }
     if (flowers >= 680 && flowers < 800) {
 
-        document.querySelector("#game-screen").style.background = "url('img/680fl.jpg') no-repeat cover";
+        gameScreen.src="/assets/img/680fl.jpg";
     }
     if (flowers >= 800) {
 

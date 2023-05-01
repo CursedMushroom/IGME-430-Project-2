@@ -14,17 +14,13 @@
             <h1>404</h1>
             <p>Seems you found a page that doesnt exist on our site! Let get you back to the home page!</p>
             <div id="title-buttons">
-                <button id='title-home'>Head To Home Page!</button>
+                <button id='return'><a href="/">Return to Home Page!</a></button>
             </div>
         </div>
 
     </section>
-    <script src="/assets/appBundle.js"></script>
-    <script>
-        document.querySelector('#title-home').addEventListener('click', () => {
-            window.location.href = '/';
-        });
-    </script>
+    <script src="/assets/notFound.js"></script>
+
 </body>
 
 </html>

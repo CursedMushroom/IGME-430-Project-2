@@ -79,7 +79,7 @@ const changePassword = async (req, res) => {
   } catch (err) {
     return res.status(500).json({ error: 'An error occured!' });
   }
-}
+};
 module.exports = {
   gamePage,
   updateGameInfo,
