@@ -17,9 +17,12 @@ const router = (app) => {
 
   app.get('/loadGameData', mid.requiresLogin, controllers.Mushroom.getGameData);
 
+  app.post('/changePassword', mid.requiresLogin, controllers.Mushroom.changePassword);
+
   app.get('/', mid.requiresSecure, mid.requiresLogout, controllers.Account.loginPage);
 
   // 404
+  app.get('/*', controllers.Account.notFound);
 };
 
 module.exports = router;

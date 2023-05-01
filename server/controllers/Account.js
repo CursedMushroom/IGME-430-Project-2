@@ -6,6 +6,10 @@ const loginPage = (req, res) => {
   res.render('login');
 };
 
+const notFound = (req, res) => {
+  res.render('notFound');
+};
+
 const logout = (req, res) => {
   req.session.destroy();
   res.redirect('/');
@@ -62,4 +66,5 @@ module.exports = {
   login,
   logout,
   signup,
+  notFound,
 };

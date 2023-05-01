@@ -228,7 +228,9 @@ h4::first-letter {
 #game-screen {
     width: 1100px;
     height: 690px;
-    background-color: var(--pale-pink);
+    background-image: url(img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 
 }
 
@@ -244,6 +246,10 @@ h4::first-letter {
     display: flex;
     justify-content: space-between;
 
+}
+
+#icon{
+    width:40px;
 }
 
 

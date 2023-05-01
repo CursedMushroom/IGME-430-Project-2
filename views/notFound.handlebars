@@ -1,0 +1,30 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Floral Fungi 404</title>
+    <link rel="shortcut icon" href="/assets/img/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="/assets/style.css" />
+</head>
+
+<body>
+
+    <section id="content">
+        <div id='title-window'>
+            <h1>404</h1>
+            <p>Seems you found a page that doesnt exist on our site! Let get you back to the home page!</p>
+            <div id="title-buttons">
+                <button id='title-home'>Head To Home Page!</button>
+            </div>
+        </div>
+
+    </section>
+    <script src="/assets/appBundle.js"></script>
+    <script>
+        document.querySelector('#title-home').addEventListener('click', () => {
+            window.location.href = '/';
+        });
+    </script>
+</body>
+
+</html>

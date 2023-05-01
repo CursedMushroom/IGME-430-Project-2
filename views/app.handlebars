@@ -14,6 +14,7 @@
   <div id="app-page">
     <div id="game-screen">
     </div>
+    {{!-- <canvas id="game-screen"></canvas> --}}
 
     <div id="sideDiv">
       <div id="flowers-settings">
@@ -56,7 +57,7 @@
             <h3 id="mush-name">Myco</h3>
             <p id="mush-desc">Myco is a creepy fella that may seem off-putting at first glance. They're quite reserved
               and
-              doesn't say much, often causing others to feel uncomfortable around them. However, once you get to know
+              don't say much, often causing others to feel uncomfortable around them. However, once you get to know
               them, you'll quickly realize that Myco is one of the sweetest characters you'll ever meet. Despite their
               quiet demeanor, they have a heart of gold and are always willing to lend a helping hand to those in need.
             </p>
@@ -155,24 +156,41 @@
         <div id="pop-media-btns">
           <button type="button" id='logout-button' class='pop-btn'><a href="/logout">Log out</a></button>
           <button type="button" id='change-password' class='pop-btn'>Change Password</button>
-          <button type="button" class='pop-btn'>Blank Button</button>
+          <button type="button" id='save-game' class='pop-btn'>Save Game</button>
           <button type="button" id='remove-ads' class='pop-btn'>Remove Ads</button>
           <button type="button" id='closepopup' class='pop-btn'>Close</button>
         </div>
 
 
       </div>
-    </div>
+    </div></div>
+
+    <div class="popup" id="change-pass">
+      <div class="overlay">
+        <div class="popcontent">
+          <h1 id="pop-title">Change Password</h1>
+          <div id="pop-media-btns">
+            <label for="new-password">New Password</label>
+            <input type="password" name="new-password" id="new-password">
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" name="confirm-password" id="confirm-password">
+
+            <button type="button" id='change-password' class='pop-btn'>Change Password</button>
+            <button type="button" id='settings-closepopup' class='pop-btn'>Close</button>
+          </div>
+
+
+        </div>
+      </div>
 
 
 
 
-    <div id="errorDiv" class='hidden'>
-      <img id="speech" src="/assets/img/speech.png" alt="speech box" />
-      <h3><span id="errorMessage"></span></h3>
-      <img id="domo" src="assets/img/domo.png" alt="domo" />
-    </div>
-    <script src="/assets/appBundle.js"></script>
+
+      <div id="errorDiv" class='hidden'>
+        <h3><span id="errorMessage"></span></h3>
+      </div>
+      <script src="/assets/appBundle.js"></script>
 </body>
 
 </html>

@@ -25,6 +25,26 @@ const AccountSchema = new mongoose.Schema({
     type: Number,
     default: 1,
   },
+  buttonMushrooms: {
+    type: Number,
+    default: 1,
+  },
+  mycoMushrooms: {
+    type: Number,
+    default: 0,
+  },
+  marelleMushrooms: {
+    type: Number,
+    default: 0,
+  },
+  brideiMushrooms: {
+    type: Number,
+    default: 0,
+  },
+  benMushrooms: {
+    type: Number,
+    default: 0,
+  },
   hasAds: {
     type: Boolean,
     default: true,
