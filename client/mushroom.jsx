@@ -41,30 +41,35 @@ const buyMushroom = (price, mushroom) => {
             flowers -= price;
             petalpersec += 1;
             buttonMush++;
+            document.querySelector('#button-have').innerHTML = `Have: ${buttonMush}`;
         }
         if (mushroom === 'benMush') {
             flowers -= price;
-            petalpersec += 2;
+            petalpersec += 100;
             benMush++;
+            document.querySelector('#ben-have').innerHTML = `Have: ${benMush}`;
         }
         if (mushroom === 'morelMush') {
             flowers -= price;
-            petalpersec += 3;
+            petalpersec += 15;
             morelMush++;
+            document.querySelector('#marelle-have').innerHTML = `Have: ${morelMush}`;
         }
         if (mushroom === 'inkMush') {
             flowers -= price;
-            petalpersec += 4;
+            petalpersec += 8;
             inkMush++;
+            document.querySelector('#myco-have').innerHTML = `Have: ${inkMush}`;
         }
         if (mushroom === 'bridalMush') {
             flowers -= price;
-            petalpersec += 5;
+            petalpersec += 30;
             bridalMush++;
+            document.querySelector('#bridei-have').innerHTML = `Have: ${bridalMush}`;
         }
 
         document.querySelector('#total-current-flowers').innerHTML = `Total Flowers: ${flowers}`;
-        document.querySelector('#button-have').innerHTML = `Have: ${buttonMush}`;
+        
 
     }
     else {
@@ -108,6 +113,11 @@ const init = () => {
     document.querySelector('#setting-button').addEventListener('click', settingPopUp);
     document.querySelector('#closepopup').addEventListener('click', settingPopUp);
     document.querySelector('#buy-mushroom1').addEventListener('click', () => buyMushroom(10, 'buttonMush'));
+    document.querySelector('#buy-mushroom2').addEventListener('click', () => buyMushroom(80, 'inkMush'));
+    document.querySelector('#buy-mushroom3').addEventListener('click', () => buyMushroom(300, 'morelMush'));
+    document.querySelector('#buy-mushroom4').addEventListener('click', () => buyMushroom(500, 'bridalMush'));
+    document.querySelector('#buy-mushroom5').addEventListener('click', () => buyMushroom(1000, 'benMush'));
+
     document.getElementById('flowerError').classList.add('hidden');
     document.querySelector('#remove-ads').addEventListener('click', removeAds);
 

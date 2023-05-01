@@ -55,7 +55,7 @@ const LoginWindow = (props) => {
             <input type="text" name="username" id="user" placeholder='username' />
             <label htmlFor="pass">Password:</label>
             <input type="text" name="pass" id="pass" placeholder='password' />
-            <input type="submit" value="Sign in" className='formSubmit' />
+            <input type="submit" value="Sign in" id='sign-in' className='formSubmit' />
         </form>
     );
 };
@@ -77,7 +77,7 @@ const SignupWindow = (props) => {
             <label htmlFor="pass2">Password:</label>
             <input type="text" name="pass2" id="pass2" placeholder='retype password' />
 
-            <input className='formSubmit' type="submit" value="Sign Up" />
+            <input className='formSubmit' type="submit" id='sign-in' value="Sign Up" />
         </form>
     )
 }
